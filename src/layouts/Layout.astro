@@ -1,20 +1,22 @@
 ---
-export interface TitleProps {
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import "../styles/global.css";
+import MainHead from "./MainHead.astro";
+export interface LayoutProps {
   title?: string;
+  description?: string;
 }
 
-const { title = "Astro" } = Astro.props as TitleProps;
+const { title = "Astro", description = "The blog about astro framework" } =
+  Astro.props as LayoutProps;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
+  <MainHead title={title} description={description} />
   <body>
+    <Nav />
     <slot />
+    <Footer />
   </body>
 </html>

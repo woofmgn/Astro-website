@@ -2,6 +2,9 @@
   "name": "astro-website",
   "type": "module",
   "version": "0.0.1",
+  "browersList": [
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -14,6 +17,9 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
     "astro": "^2.3.2",
+    "astro-icon": "^0.8.0",
+    "postcss": "^8.4.23",
+    "postcss-preset-env": "^8.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
