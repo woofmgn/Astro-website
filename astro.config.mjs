@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'httpls://astro-website.netllfy.app',
+  site: 'https://blog-astro-den.netllfy.app',
   integrations: [react(), image({
     serviceEntryPoint: '@astrojs/image/sharp'
   }), sitemap()]
