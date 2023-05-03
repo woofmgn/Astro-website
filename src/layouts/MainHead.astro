@@ -1,6 +1,8 @@
 ---
+import Seo from "../components/Seo.astro";
 import type { LayoutProps } from "./Layout.astro";
-const { title, description } = Astro.props as LayoutProps;
+const { title, description, image, frontmatter, robots } =
+  Astro.props as LayoutProps;
 ---
 
 <head>
@@ -15,5 +17,13 @@ const { title, description } = Astro.props as LayoutProps;
     href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet"
   />
+  <Seo
+    title={title}
+    description={description}
+    url={Astro.url}
+    image={image}
+    frontmatter={frontmatter}
+    robots={robots}
+  />
+  <title>{title}</title>
 </head>
-<title>{title}</title>

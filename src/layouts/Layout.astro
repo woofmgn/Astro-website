@@ -6,14 +6,28 @@ import MainHead from "./MainHead.astro";
 export interface LayoutProps {
   title?: string;
   description?: string;
+  image?: string;
+  frontmatter?: any;
+  robots?: any;
 }
 
-const { title = "Astro", description = "The blog about astro framework" } =
-  Astro.props as LayoutProps;
+const {
+  title = "Astro",
+  description = "The blog about astro framework",
+  image,
+  frontmatter,
+  robots,
+} = Astro.props as LayoutProps;
 ---
 
 <html lang="en">
-  <MainHead title={title} description={description} />
+  <MainHead
+    title={title}
+    description={description}
+    image={image}
+    frontmatter={frontmatter}
+    robots={robots}
+  />
   <body>
     <Nav />
     <main>
